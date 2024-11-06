@@ -1,0 +1,147 @@
+@import url('reset.css');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory; /* Ativa o scroll snap no eixo Y */
+    background: #FEF3E2;
+    font-family: "Poppins", serif;;
+}
+
+.section-container {
+    height: 100vh; /* Cada section ocupa a altura total da tela */
+    width: 100vw; /* Cada section ocupa toda a largura da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    scroll-snap-align: start; /* Alinha o início de cada section no snap */
+}
+
+.intro-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    max-width: 60%; /* Limita a largura do conteúdo centralizado */
+    background: whitesmoke;
+    border-radius: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    padding: 3em;
+    overflow: hidden;
+    gap: 2em; /* Espaçamento entre os elementos */
+}
+
+.info {
+    flex: 1; /* Ocupa o espaço restante à esquerda */
+    text-align: left;
+}
+
+.info h1 {
+    font-size: 40px;
+    padding-bottom: 1em;
+}
+
+.info p {
+    font-size: 20px;
+}
+
+.info ul {
+    display: flex;
+    gap: 1em;
+    padding-top: 1.5em;
+}
+
+.bio {
+    flex-shrink: 0; /* Garante que a bio não se expanda */
+}
+
+.bio img {
+    border-radius: 10px;
+    max-width: 300px; /* Tamanho fixo da imagem */
+    height: auto;
+}
+
+
+.icon {
+    max-height: 40px;
+}
+
+.icon:hover {
+    filter: brightness(1.3); /* Torna o ícone mais claro ao passar o mouse */
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo branco transparente */
+    border-radius: 50%; /* Opcional: borda arredondada para destacar o efeito */
+}
+
+.icon:active{
+    transform: scale(0.9);
+}
+
+
+.swot {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Cria duas colunas de largura igual */
+    gap: 20px;
+    padding: 20px;
+    width: 100vw;
+    height: 100vh; /* A seção ocupará a altura total da tela */
+    margin: 0;
+}
+
+.swot-card {
+    height: 100%;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza horizontalmente */
+}
+
+.strength { background-color: #4CAF50; }
+.weakness { background-color: #F44336; }
+.opportunity { background-color: #2196F3; }
+.threat { background-color: #FF9800; }
+
+.swot-card h2 {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 5px;
+    align-self: stretch; /* Garante que o título ocupe toda a largura */
+    text-align: center;
+}
+
+.swot-card ul {
+    list-style-type: none;
+    padding: 0;
+    margin: auto 0; /* Centraliza verticalmente a lista no card */
+    display: flex;
+    flex-direction: column;
+    gap: 5px; /* Espaçamento entre os itens da lista */
+}
+
+.swot-card li {
+    font-size: 1.5em;
+    text-align: left;
+    transition: text-shadow 0.3s ease, border 0.2s ease; /* Transições suaves para hover e click */
+    cursor: pointer; /* Ícone de cursor para indicar interatividade */
+}
+
+.swot-card li:hover {
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Efeito de luz suave no hover */
+    color: #fff; /* Opcional: muda a cor do texto para destacar */
+}
