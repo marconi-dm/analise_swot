@@ -145,3 +145,45 @@ body {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.8); /* Efeito de luz suave no hover */
     color: #fff; /* Opcional: muda a cor do texto para destacar */
 }
+
+
+
+@media (max-width: 768px) {
+    .intro-container {
+        flex-direction: column; /* Coloca a foto abaixo do texto */
+        align-items: center;
+        max-width: 100%; /* Ajusta a largura para caber em telas menores */
+    }
+
+    .bio img {
+        max-width: 200px; /* Reduz o tamanho da imagem para dispositivos móveis */
+        width: 150px;
+        height: 150px;
+        border-radius: 50%; /* Torna a imagem redonda */
+    }
+
+    .swot {
+        grid-template-columns: 1fr; /* Ajusta para uma coluna em telas menores */
+        width: 100%;
+        padding: 10px;
+        gap: 15px;
+    }
+
+    .swot-card {
+        height: auto; /* Permite que os cards se ajustem automaticamente */
+        padding: 15px;
+        font-size: 1em; /* Reduz o tamanho do texto para caber melhor em dispositivos móveis */
+    }
+
+    .swot-card h2 {
+        font-size: 1.2em;
+        padding: 8px;
+    }
+
+    .info ul {
+        justify-content: center; /* Centraliza os ícones de LinkedIn e GitHub */
+        padding-top: 1em; /* Espaçamento superior para melhor separação */
+        width: 100%; /* Garante que ocupe a largura disponível */
+        text-align: center;
+    }
+}
