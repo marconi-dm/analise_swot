@@ -149,6 +149,14 @@ body {
 
 
 @media (max-width: 768px) {
+
+
+    body {
+        overflow-y: auto; /* Permite rolagem normal */
+        scroll-snap-type: none; /* Desativa o scroll snap */
+    }
+
+    
     .intro-container {
         flex-direction: column; /* Coloca a foto abaixo do texto */
         align-items: center;
