@@ -194,4 +194,8 @@ body {
         width: 100%; /* Garante que ocupe a largura disponível */
         text-align: center;
     }
+
+    .swot-card ul li {
+        padding-bottom: 1em;
+    }
 }
